@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard - Akbar Komputer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-200 min-h-screen">
+    <nav class="bg-gray-800 text-white shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold">ADMIN PANEL</h1>
+            <a href="/logout" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Logout</a>
+        </div>
+    </nav>
+    <div class="container mx-auto px-6 py-8">
+        <h2 class="text-3xl font-bold mb-6">Antrian Servis Masuk</h2>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="overflow-x-auto">
+                <table class="min-w-full">
+                    <thead>
+                        <tr class="border-b-2 border-gray-300">
+                            <th class="py-2 px-4 text-left">ID</th>
+                            <th class="py-2 px-4 text-left">Klien</th>
+                            <th class="py-2 px-4 text-left">No. HP</th>
+                            <th class="py-2 px-4 text-left">Perangkat</th>
+                            <th class="py-2 px-4 text-left">Kerusakan</th>
+                            <th class="py-2 px-4 text-left">Tgl Masuk</th>
+                            <th class="py-2 px-4 text-left">Status</th>
+                            <th class="py-2 px-4 text-left">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="admin-orders-table-body">
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Fungsi untuk mengambil semua data order dari server
+        async function fetchOrders() {
+            const response = await fetch('/api/admin/all-orders');
+            const orders = await response.json();
+            const tableBody = document.getElementById('admin-orders-table-body');
+            tableBody.innerHTML = ''; // Kosongkan tabel sebelum diisi ulang
+
+            if (orders.length === 0) {
+                tableBody.innerHTML = '<tr><td colspan="8" class="text-center py-4">Tidak ada order masuk.</td></tr>';
+            } else {
+                orders.forEach(order => {
+                    const row = `
+                        <tr class="border-b hover:bg-gray-50 align-top">
+                            <td class="py-3 px-4 font-mono">AK-${order.id}</td>
+                            <td class="py-3 px-4 font-semibold">${order.clientName}</td>
+                            <td class="py-3 px-4">${order.phone}</td>
+                            <td class="py-3 px-4">${order.deviceType}</td>
+                            <td class="py-3 px-4 text-sm">${order.issueDescription}</td>
+                            <td class="py-3 px-4">${order.formattedDate}</td>
+                            <td class="py-3 px-4 font-bold" id="status-order-${order.id}">${order.status}</td>
+                            <td class="py-3 px-4">
+                                <select onchange="updateStatus(${order.id}, this.value)" class="border p-1 rounded w-full">
+                                    <option value="Diterima" ${order.status === 'Diterima' ? 'selected' : ''}>Diterima</option>
+                                    <option value="Diagnosa" ${order.status === 'Diagnosa' ? 'selected' : ''}>Diagnosa</option>
+                                    <option value="Menunggu Sparepart" ${order.status === 'Menunggu Sparepart' ? 'selected' : ''}>Menunggu Sparepart</option>
+                                    <option value="Pengerjaan" ${order.status === 'Pengerjaan' ? 'selected' : ''}>Pengerjaan</option>
+                                    <option value="Selesai" ${order.status === 'Selesai' ? 'selected' : ''}>Selesai</option>
+                                    <option value="Diambil" ${order.status === 'Diambil' ? 'selected' : ''}>Diambil</option>
+                                </select>
+                            </td>
+                        </tr>
+                    `;
+                    tableBody.innerHTML += row;
+                });
+            }
+        }
+        
+        // Fungsi untuk mengirim update status ke server
+        async function updateStatus(orderId, newStatus) {
+            try {
+                const response = await fetch('/api/admin/update-status', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ orderId, newStatus }),
+                });
+                const result = await response.json();
+                if (result.success) {
+                    alert(result.message);
+                    // Update teks status secara langsung tanpa memuat ulang seluruh tabel
+                    document.getElementById(`status-order-${orderId}`).textContent = newStatus;
+                } else {
+                    alert('Gagal mengupdate status.');
+                }
+            } catch (error) {
+                alert('Terjadi error saat menghubungi server.');
+            }
+        }
+
+        // Panggil fungsi fetchOrders() saat halaman pertama kali dimuat
+        document.addEventListener('DOMContentLoaded', fetchOrders);
+    </script>
+</body>
+</html>

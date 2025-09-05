@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Akbar Komputer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-blue-600">Akbar Komputer</h1>
+            <div>
+                <span id="welcome-message" class="mr-4"></span>
+                <a href="/logout" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container mx-auto px-6 py-8">
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-3xl font-bold">Order Servis Saya</h2>
+            <a href="/order.html" class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700">Buat Order Baru</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="overflow-x-auto">
+                <table class="min-w-full">
+                    <thead>
+                        <tr class="border-b">
+                            <th class="py-2 px-4 text-left">ID Order</th>
+                            <th class="py-2 px-4 text-left">Perangkat</th>
+                            <th class="py-2 px-4 text-left">Deskripsi Kerusakan</th>
+                            <th class="py-2 px-4 text-left">Tanggal</th>
+                            <th class="py-2 px-4 text-left">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="orders-table-body">
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <nav class="bg-white shadow-md">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="/" class="text-xl font-bold text-blue-600">Akbar Komputer</a>
+    </div>
+</nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            // Ambil nama pengguna
+            const sessionResponse = await fetch('/api/user-session');
+            const sessionData = await sessionResponse.json();
+            document.getElementById('welcome-message').textContent = `Selamat datang, ${sessionData.name}!`;
+
+            // Ambil data order
+            const ordersResponse = await fetch('/api/my-orders');
+            const orders = await ordersResponse.json();
+            const tableBody = document.getElementById('orders-table-body');
+            
+            if (orders.length === 0) {
+                tableBody.innerHTML = '<tr><td colspan="5" class="text-center py-4">Anda belum memiliki order.</td></tr>';
+            } else {
+                orders.forEach(order => {
+                    const row = `
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="py-2 px-4 font-mono">AK-${order.id}</td>
+                            <td class="py-2 px-4">${order.deviceType}</td>
+                            <td class="py-2 px-4">${order.issueDescription}</td>
+                            <td class="py-2 px-4">${order.formattedDate}</td>
+                            <td class="py-2 px-4"><span class="px-2 py-1 text-sm font-semibold rounded-full bg-blue-100 text-blue-800">${order.status}</span></td>
+                        </tr>
+                    `;
+                    tableBody.innerHTML += row;
+                });
+            }
+        });
+    </script>
+</body>
+</html>

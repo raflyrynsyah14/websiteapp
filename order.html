@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Buat Order Baru - Akbar Komputer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="w-full max-w-lg bg-white p-8 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold text-center mb-6">Formulir Order Servis</h2>
+        <form action="/api/orders" method="POST">
+            <div class="mb-4">
+                <label for="deviceType" class="block text-gray-700 mb-2">Jenis Perangkat</label>
+                <input type="text" id="deviceType" name="deviceType" class="w-full px-3 py-2 border rounded" placeholder="Contoh: Laptop Dell, PC Gaming, iPhone 13" required>
+            </div>
+            <div class="mb-6">
+                <label for="issueDescription" class="block text-gray-700 mb-2">Jelaskan Kerusakan</label>
+                <textarea id="issueDescription" name="issueDescription" rows="4" class="w-full px-3 py-2 border rounded" placeholder="Contoh: Mati total, layar bergaris, lemot, kena air" required></textarea>
+            </div>
+            <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Kirim Order</button>
+            <a href="/dashboard.html" class="block text-center mt-4 text-gray-600">Batal</a>
+        </form>
+    </div>
+</body>
+</html>

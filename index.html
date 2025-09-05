@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akbar Komputer - Solusi Servis & IT Profesional Terpercaya</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header class="bg-white/80 backdrop-blur-lg shadow-md fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#beranda" class="text-2xl font-bold text-gray-900">
+                    Akbar <span class="text-blue-600">Komputer</span>
+                </a>
+                <nav class="hidden lg:flex space-x-6">
+                    <a href="#beranda" class="text-gray-600 hover:text-blue-600 transition duration-300">Beranda</a>
+                    <a href="#pemesanan" class="text-gray-600 hover:text-blue-600 transition duration-300">Pemesanan</a>
+                    <a href="#testimoni" class="text-gray-600 hover:text-blue-600 transition duration-300">Testimoni</a>
+                    <a href="#tim" class="text-gray-600 hover:text-blue-600 transition duration-300">Tim Kami</a>
+                    <a href="#lacak" class="text-gray-600 hover:text-blue-600 transition duration-300">Lacak Servis</a>
+                    <a href="#kontak" class="text-gray-600 hover:text-blue-600 transition duration-300">Kontak</a>
+                </nav>
+                <div id="auth-buttons" class="hidden lg:flex items-center space-x-4">
+                <a href="/login.html" class="bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition duration-300 shadow-lg">
+                    Booking Servis / Login
+                </a>
+            </div>
+                <button id="mobile-menu-button" class="lg:hidden text-gray-800 focus:outline-none">;
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden lg:hidden">
+            <a href="#beranda" class="block py-2 px-6 text-sm text-gray-700 hover:bg-blue-50">Beranda</a>
+            <a href="#pemesanan" class="block py-2 px-6 text-sm text-gray-700 hover:bg-blue-50">Pemesanan</a>
+            <a href="#testimoni" class="block py-2 px-6 text-sm text-gray-700 hover:bg-blue-50">Testimoni</a>
+            <a href="#tim" class="block py-2 px-6 text-sm text-gray-700 hover:bg-blue-50">Tim Kami</a>
+            <a href="#lacak" class="block py-2 px-6 text-sm text-gray-700 hover:bg-blue-50">Tracking</a>
+            <a href="#kontak" class="block py-2 px-6 text-sm text-gray-700 hover:bg-blue-50">Kontak</a>
+            <a href="#pemesanan" class="block w-full text-left py-3 px-6 text-sm text-white bg-blue-600 hover:bg-blue-700">Booking Servis</a>
+        </div>
+    </header>
+
+    <section id="beranda" class="hero-section">
+        
+        <div id="hero-bg-1" class="hero-bg active" style="background-image: url('/images/adi-goldstein-EUsVwEOsblE-unsplash.jpg');"></div>
+        
+        <div id="hero-bg-2" class="hero-bg" style="background-image: url('/images/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg');"></div>
+
+        <div id="hero-bg-3" class="hero-bg" style="background-image: url('/images/nat-hwcMLF374mY-unsplash.jpg');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content container mx-auto px-6" data-aos="fade-up">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">Solusi Cepat & Profesional</h1>
+            <p class="text-lg md:text-2xl mb-8 max-w-3xl mx-auto">Untuk semua masalah Komputer, Laptop, dan Smartphone Anda. Ditangani oleh teknisi bersertifikat.</p>
+            <a href="#layanan" class="bg-blue-600 text-white font-bold px-8 py-4 rounded-lg hover:bg-blue-700 transition duration-300 text-lg shadow-xl">Lihat Layanan Kami</a>
+        </div>
+    </section>
+
+    <section id="layanan" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Layanan Unggulan Kami</h2>
+                <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">Kami menyediakan berbagai solusi untuk memastikan perangkat Anda kembali optimal.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-gray-50 p-8 rounded-xl text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-blue-100 text-blue-600 rounded-full p-4 inline-block mb-4"><i class="fas fa-mobile-screen-button fa-2x"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Servis Smartphone</h3>
+                    <p class="text-gray-600">Perbaikan hardware (LCD, baterai, dll) dan software untuk semua merk HP.</p>
+                </div>
+                <div class="service-card bg-gray-50 p-8 rounded-xl text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-blue-100 text-blue-600 rounded-full p-4 inline-block mb-4"><i class="fas fa-laptop-medical fa-2x"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Servis Laptop & PC</h3>
+                    <p class="text-gray-600">Instalasi ulang, upgrade RAM/SSD, hingga perbaikan motherboard kompleks.</p>
+                </div>
+                <div class="service-card bg-gray-50 p-8 rounded-xl text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-blue-100 text-blue-600 rounded-full p-4 inline-block mb-4"><i class="fas fa-database fa-2x"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Recovery Data</h3>
+                    <p class="text-gray-600">Selamatkan data penting Anda dari hardisk, SSD, atau flashdisk yang rusak.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeri" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Galeri Hasil Kerja Kami</h2>
+                <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">Kualitas dan kepuasan pelanggan adalah bukti nyata dari pekerjaan kami.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div data-aos="zoom-in"><img class="h-auto w-full rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300" src="https://placehold.co/600x800/dbeafe/1e40af?text=Rakit+PC+Gaming" alt="PC Gaming Rakitan"></div>
+                <div data-aos="zoom-in" data-aos-delay="100"><img class="h-auto w-full rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300" src="https://placehold.co/600x800/bfdbfe/1d4ed8?text=Ganti+LCD+iPhone" alt="Ganti LCD iPhone"></div>
+                <div data-aos="zoom-in" data-aos-delay="200"><img class="h-auto w-full rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300" src="https://placehold.co/600x800/93c5fd/1e3a8a?text=Cleaning+Laptop" alt="Laptop setelah dibersihkan"></div>
+                <div data-aos="zoom-in" data-aos-delay="300"><img class="h-auto w-full rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300" src="https://placehold.co/600x800/60a5fa/1e3a8a?text=Upgrade+SSD" alt="Proses Upgrade SSD"></div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="testimoni" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Apa Kata Klien Kami?</h2>
+                <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">Kepuasan Anda adalah prioritas utama kami.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-yellow-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <blockquote class="text-gray-600 italic mb-4">"Pelayanannya cepat banget! Laptop saya yang tadinya lemot sekarang ngebut lagi setelah di-upgrade SSD di sini. Teknisi ramah dan informatif."</blockquote>
+                    <p class="font-bold text-gray-900">Andi Pratama</p>
+                    <p class="text-sm text-gray-500">Karyawan Swasta</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-yellow-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <blockquote class="text-gray-600 italic mb-4">"Akhirnya ada tempat servis terpercaya di kota ini. Prosesnya transparan, bisa cek status online, dan harganya juga masuk akal. Recommended!"</blockquote>
+                    <p class="font-bold text-gray-900">Siti Aisyah</p>
+                    <p class="text-sm text-gray-500">Mahasiswi</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl" data-aos="fade-up" data-aos-delay="300">
+                     <div class="text-yellow-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                    <blockquote class="text-gray-600 italic mb-4">"HP saya mati total, dikira harus ganti baru. Ternyata masih bisa diselamatkan di Akbar Komputer. Data-data penting aman semua. Terima kasih!"</blockquote>
+                    <p class="font-bold text-gray-900">Budi Santoso</p>
+                    <p class="text-sm text-gray-500">Wirausaha</p>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-yellow-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <blockquote class="text-gray-600 italic mb-4">"Pelayanannya cepat banget! Laptop saya yang tadinya lemot sekarang ngebut lagi setelah di-upgrade SSD di sini. Teknisi ramah dan informatif."</blockquote>
+                    <p class="font-bold text-gray-900">Andi Pratama</p>
+                    <p class="text-sm text-gray-500">Karyawan Swasta</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-yellow-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <blockquote class="text-gray-600 italic mb-4">"Akhirnya ada tempat servis terpercaya di kota ini. Prosesnya transparan, bisa cek status online, dan harganya juga masuk akal. Recommended!"</blockquote>
+                    <p class="font-bold text-gray-900">Siti Aisyah</p>
+                    <p class="text-sm text-gray-500">Mahasiswi</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl" data-aos="fade-up" data-aos-delay="300">
+                     <div class="text-yellow-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                    <blockquote class="text-gray-600 italic mb-4">"HP saya mati total, dikira harus ganti baru. Ternyata masih bisa diselamatkan di Akbar Komputer. Data-data penting aman semua. Terima kasih!"</blockquote>
+                    <p class="font-bold text-gray-900">Budi Santoso</p>
+                    <p class="text-sm text-gray-500">Wirausaha</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tim" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Tim Teknisi Profesional Kami</h2>
+                <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">Didukung oleh para ahli yang berpengalaman di bidangnya masing-masing.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <img class="w-40 h-40 mx-auto rounded-full mb-4 object-cover shadow-lg" src="/images/Gemini_Generated_Image_3ccigc3ccigc3cci.png" alt="Foto Teknisi">
+                    <h3 class="text-xl font-bold">Akbar Computer.</h3>
+                    <p class="text-blue-600 font-semibold">Spesialis Hardware & Motherboard</p>
+                    <p class="text-gray-500 text-sm mt-1">Pengalaman 10+ tahun dalam perbaikan sirkuit kompleks.</p>
+                </div>
+                 <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <img class="w-40 h-40 mx-auto rounded-full mb-4 object-cover shadow-lg" src="https://placehold.co/400x400/4a5568/ffffff?text=Rizky" alt="Foto Teknisi">
+                    <h3 class="text-xl font-bold">Rizky S.</h3>
+                    <p class="text-blue-600 font-semibold">Spesialis Software & Sistem</p>
+                    <p class="text-gray-500 text-sm mt-1">Ahli dalam instalasi, recovery data, dan keamanan siber.</p>
+                </div>
+                 <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <img class="w-40 h-40 mx-auto rounded-full mb-4 object-cover shadow-lg" src="https://placehold.co/400x400/718096/ffffff?text=Dewi" alt="Foto Teknisi">
+                    <h3 class="text-xl font-bold">Dewi K.</h3>
+                    <p class="text-blue-600 font-semibold">Spesialis Smartphone & Gadget</p>
+                    <p class="text-gray-500 text-sm mt-1">Terampil dalam perbaikan presisi untuk perangkat mobile.</p>
+                </div>
+                 <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <img class="w-40 h-40 mx-auto rounded-full mb-4 object-cover shadow-lg" src="https://placehold.co/400x400/a0aec0/ffffff?text=Joko" alt="Foto Teknisi">
+                    <h3 class="text-xl font-bold">Putri.</h3>
+                    <p class="text-blue-600 font-semibold">Customer Support & Admin</p>
+                    <p class="text-gray-500 text-sm mt-1">Siap membantu Anda dalam proses booking dan konsultasi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="lacak" class="py-20 bg-blue-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <div data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold">Tracking Perbaikan Anda</h2>
+                <p class="text-lg text-blue-200 mt-4 mb-8 max-w-2xl mx-auto">Masukkan nomor servis Anda untuk melihat progres pengerjaan perangkat Anda secara real-time.</p>
+                <div class="max-w-2xl mx-auto bg-white rounded-lg p-6 shadow-xl">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <input type="text" id="tracking-number" placeholder="Contoh: AK-12345" class="w-full px-4 py-3 rounded-md text-gray-900 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <button id="track-button" class="bg-gray-800 text-white font-bold px-8 py-3 rounded-md hover:bg-gray-900 transition duration-300">Lacak Sekarang</button>
+                    </div>
+                    <div id="tracking-result" class="mt-8 text-left text-gray-800 hidden">
+                        <h4 class="font-bold text-lg mb-4">Status untuk No. Servis: <span id="result-id" class="text-blue-600"></span></h4>
+                        <div class="tracking-progress-bar">
+                            <div id="step1" class="step active"><i class="fas fa-receipt"></i><p>Diterima</p></div>
+                            <div id="step2" class="step"><i class="fas fa-search"></i><p>Diagnosa</p></div>
+                            <div id="step3" class="step"><i class="fas fa-wrench"></i><p>Pengerjaan</p></div>
+                            <div id="step4" class="step"><i class="fas fa-check-circle"></i><p>Selesai</p></div>
+                        </div>
+                        <div class="bg-gray-100 p-4 rounded-md mt-10">
+                            <p class="font-semibold">Update Terakhir:</p>
+                            <p id="tracking-update-text">Perangkat sedang dalam tahap diagnosa oleh teknisi kami.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="pemesanan" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Mulai Perbaikan & Opsi Pembayaran</h2>
+                <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">Proses mudah dan pembayaran yang fleksibel untuk kenyamanan Anda.</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-bold mb-4">Pesan Jasa Servis</h3>
+                    <p class="text-gray-600 mb-6">Untuk memulai, silakan login atau buat akun baru. Dengan memiliki akun, Anda dapat melacak riwayat servis dan mendapatkan penawaran eksklusif dari kami.</p>
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4">1</div>
+                            <div>
+                                <h4 class="font-bold">Login / Daftar Akun</h4>
+                                <p class="text-gray-600">Akses akun Anda atau daftar jika belum punya.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start mb-4">
+                            <div class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4">2</div>
+                            <div>
+                                <h4 class="font-bold">Isi Formulir Order</h4>
+                                <p class="text-gray-600">Jelaskan detail kerusakan perangkat Anda.</p>
+                            </div>
+                        </div>
+                         <div class="flex items-start">
+                            <div class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4">3</div>
+                            <div>
+                                <h4 class="font-bold">Dapatkan Kode Booking</h4>
+                                <p class="text-gray-600">Gunakan kode ini untuk melacak dan konfirmasi.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex gap-4">
+                        <a href="/login.html" class="bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300">Login / Daftar</a>
+                        <a href="https://wa.me/6289526123405?text=Halo%20Akbar%20Komputer,%20saya%20mau%20bertanya%20dulu." target="_blank" class="bg-gray-200 text-gray-800 font-semibold px-6 py-3 rounded-lg hover:bg-gray-300 transition duration-300">Tanya Dulu</a>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-bold mb-4">Metode Pembayaran Didukung</h3>
+                    <p class="text-gray-600 mb-6">Kami menerima berbagai metode pembayaran untuk kemudahan transaksi setelah servis selesai.</p>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-center">
+                        <div class="bg-gray-50 p-4 rounded-lg flex flex-col items-center justify-center">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/QRIS_logo.svg/1024px-QRIS_logo.svg.png" alt="QRIS" class="h-10 mb-2">
+                            <p class="font-semibold">QRIS</p>
+                        </div>
+                         <div class="bg-gray-50 p-4 rounded-lg flex flex-col items-center justify-center">
+                            <img src="/images/Bank/BCA.jpeg" alt="BCA" class="h-8 mb-2">
+                            <p class="font-semibold">BCA</p>
+                        </div>
+                         <div class="bg-gray-50 p-4 rounded-lg flex flex-col items-center justify-center">
+                            <img src="/images/Bank/BRI.png" alt="BRI" class="h-8 mb-2">
+                            <p class="font-semibold">BRI</p>
+                        </div>
+                         <div class="bg-gray-50 p-4 rounded-lg flex flex-col items-center justify-center">
+                            <img src="/images/Bank/Mandiri.png" alt="Mandiri" class="h-8 mb-2">
+                            <p class="font-semibold">Mandiri</p>
+                        </div>
+                         <div class="bg-gray-50 p-4 rounded-lg flex flex-col items-center justify-center">
+                            <img src="/images/Bank/dana.png" alt="DANA" class="h-8 mb-2">
+                            <p class="font-semibold">DANA</p>
+                        </div>
+                         <div class="bg-gray-50 p-4 rounded-lg flex flex-col items-center justify-center">
+                            <img src="/images/Bank/GoPay-Logo.png" alt="GoPay" class="h-8 mb-2">
+                            <p class="font-semibold">GoPay</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontak" class="py-20 bg-gray-800 text-white">
+        <div class="container mx-auto px-6" data-aos="fade-up">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold">Hubungi & Kunjungi Kami</h2>
+                <p class="text-lg text-gray-300 mt-4 max-w-2xl mx-auto">Kami siap membantu Anda. Jangan ragu untuk menghubungi kami atau datang langsung ke lokasi.</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-blue-400 mb-4">Informasi Kontak</h3>
+                    <p class="mb-4 text-gray-300">Hubungi kami melalui WhatsApp untuk respon tercepat atau kunjungi kami langsung di alamat berikut.</p>
+                     <div class="space-y-4">
+                        <p class="flex items-center"><i class="fas fa-map-marker-alt fa-fw mr-3 text-blue-400"></i> Jl. Minasa Upa No.4A, Gn. Sari, Kec. Rappocini, Kota Makassar, Sulawesi Selatan 92114</p>
+                        <p class="flex items-center"><i class="fas fa-phone fa-fw mr-3 text-blue-400"></i> (0411) 123-456</p>
+                        <p class="flex items-center"><i class="fas fa-envelope fa-fw mr-3 text-blue-400"></i> support@akbarkomputer.com</p>
+                        <p class="flex items-center"><i class="fas fa-clock fa-fw mr-3 text-blue-400"></i> Senin - Sabtu: 09:00 - 21:00 WITA</p>
+                    </div>
+                    <a href="https://wa.me/6289526123405?text=Halo%20Akbar%20Komputer,%20saya%20butuh%20bantuan%20untuk%20servis." target="_blank" class="mt-8 bg-green-500 text-white font-bold px-8 py-3 rounded-lg hover:bg-green-600 transition duration-300 text-lg shadow-xl inline-flex items-center">
+                        <i class="fab fa-whatsapp mr-3"></i> Hubungi via WhatsApp
+                    </a>
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-2xl h-96">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248.34201720879796!2d119.4595080380692!3d-5.1881891360606405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbee38190aad8b1%3A0x3288dd0080abdec6!2sService%20Point%20Akbar%20Computer!5e0!3m2!1sid!2sid!4v1754615831658!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <a href="#beranda" class="text-xl font-bold text-white">
+                Akbar <span class="text-blue-500">Komputer</span>
+            </a>
+            <div class="flex justify-center space-x-6 my-6">
+                <a href="https://lynk.id/softdevcomputing.id" class="text-gray-400 hover:text-white transition"><i class="fab fa-lynk-id fa-lg"></i></a>
+                <a href="https://www.instagram.com/sofwaredevcomputing.it?igsh=MWF3M2ozZnk3bGNpcg==" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-tiktok fa-lg"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-youtube fa-lg"></i></a>
+            </div>
+            <p>&copy; 2017 - 2025 Akbar Komputer. Semua Hak Cipta Dilindungi.</p>
+            <p class="text-sm text-gray-500 mt-2">Didesain dengan ❤️ di Makassar, Indonesia.</p>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inisialisasi Animate On Scroll
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+
+        // Toggle Mobile Menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Hero Background Slideshow
+        const heroBgs = [
+            document.getElementById('hero-bg-1'),
+            document.getElementById('hero-bg-2'),
+            document.getElementById('hero-bg-3')
+        ];
+        let currentBgIndex = 0;
+        function changeHeroBg() {
+            heroBgs[currentBgIndex].classList.remove('active');
+            currentBgIndex = (currentBgIndex + 1) % heroBgs.length;
+            heroBgs[currentBgIndex].classList.add('active');
+        }
+        setInterval(changeHeroBg, 3000); // Ganti gambar setiap 5 detik
+
+        // FUNGSI UNTUK MELACAK SERVIS (SIMULASI)
+        const trackButton = document.getElementById('track-button');
+        const trackingResult = document.getElementById('tracking-result');
+        const trackingInput = document.getElementById('tracking-number');
+        
+        trackButton.addEventListener('click', () => {
+            const trackingNumber = trackingInput.value.trim();
+            if (trackingNumber === "") {
+                alert("Silakan masukkan nomor servis Anda.");
+                return;
+            }
+
+            // -- PENTING: BAGIAN INI HANYA SIMULASI --
+            // Dalam aplikasi nyata, Anda akan membuat permintaan (fetch) ke server Anda di sini.
+            // Server akan memeriksa database dan mengembalikan status sebenarnya.
+            
+            // Contoh data palsu dari server
+            const fakeServerResponse = {
+                'AK-12345': { status: 'diagnosa', update: 'Perangkat sedang dalam tahap diagnosa kerusakan oleh teknisi kami.'},
+                'AK-54321': { status: 'selesai', update: 'Perbaikan telah selesai! Perangkat Anda siap diambil atau diantar.'},
+                'AK-98765': { status: 'pengerjaan', update: 'Teknisi sedang melakukan penggantian keyboard. Diperkirakan selesai besok.'}
+            };
+            
+            const resultData = fakeServerResponse[trackingNumber.toUpperCase()];
+
+            if(resultData) {
+                document.getElementById('result-id').textContent = trackingNumber.toUpperCase();
+                document.getElementById('tracking-update-text').textContent = resultData.update;
+                
+                // Update progress bar
+                const steps = ['step1', 'step2', 'step3', 'step4'];
+                steps.forEach(s => document.getElementById(s).classList.remove('active'));
+
+                if(resultData.status === 'diterima') {
+                    document.getElementById('step1').classList.add('active');
+                } else if(resultData.status === 'diagnosa') {
+                    document.getElementById('step1').classList.add('active');
+                    document.getElementById('step2').classList.add('active');
+                } else if(resultData.status === 'pengerjaan') {
+                    document.getElementById('step1').classList.add('active');
+                    document.getElementById('step2').classList.add('active');
+                    document.getElementById('step3').classList.add('active');
+                } else if(resultData.status === 'selesai') {
+                    steps.forEach(s => document.getElementById(s).classList.add('active'));
+                }
+
+                trackingResult.classList.remove('hidden');
+            } else {
+                alert("Nomor servis tidak ditemukan. Pastikan nomor yang Anda masukkan sudah benar.");
+                trackingResult.classList.add('hidden');
+            }
+        });
+
+    </script>
+</body>
+</html>
